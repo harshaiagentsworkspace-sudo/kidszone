@@ -1,0 +1,225 @@
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-roboto-mono);
+  --font-quicksand: var(--font-quicksand);
+  --font-be-vietnam-pro: var(--font-be-vietnam-pro);
+
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  /* Custom Design System Colors */
+  --color-lumina-surface: #fcf8ff;
+  --color-lumina-surface-dim: #ddd8e6;
+  --color-lumina-primary: #522de6;
+  --color-lumina-primary-container: #6b4eff;
+  --color-lumina-on-primary: #ffffff;
+  --color-lumina-secondary: #964900;
+  --color-lumina-secondary-container: #fe8a29;
+  --color-lumina-tertiary: #735c00;
+  --color-lumina-tertiary-container: #cda719;
+
+  /* Pastel Colors for Categorization */
+  --color-pastel-green: #e6f4ea;
+  --color-pastel-pink: #fce8e6;
+  --color-pastel-yellow: #fef7e0;
+  --color-pastel-blue: #e8f0fe;
+  
+  --color-lumina-ambient: rgba(90, 57, 238, 0.08); /* Derived from surface-tint */
+
+  --radius-lg: 2rem;
+  --radius-md: 1.5rem;
+  --radius-sm: 0.5rem;
+  --radius-xl: 3rem;
+  --radius-full: 9999px;
+  
+  --spacing-container-max: 1280px;
+  --spacing-gutter: 24px;
+  --spacing-section-padding-desktop: 120px;
+  --spacing-section-padding-mobile: 64px;
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+@layer utilities {
+  body {
+    font-family: var(--font-be-vietnam-pro);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Typography Classes */
+  .display-lg {
+    font-family: var(--font-quicksand);
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+  @media (max-width: 768px) {
+    .display-lg {
+      font-size: 36px;
+      line-height: 1.2;
+    }
+  }
+  
+  .headline-lg {
+    font-family: var(--font-quicksand);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  
+  .headline-md {
+    font-family: var(--font-quicksand);
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  
+  .body-lg {
+    font-family: var(--font-be-vietnam-pro);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+  
+  .body-md {
+    font-family: var(--font-be-vietnam-pro);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  
+  .label-bold {
+    font-family: var(--font-be-vietnam-pro);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  
+  .label-sm {
+    font-family: var(--font-be-vietnam-pro);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  /* Custom Utilities */
+  .shadow-ambient {
+    box-shadow: 0 10px 40px var(--color-lumina-ambient);
+  }
+  
+  .shadow-ambient-hover {
+    box-shadow: 0 20px 50px rgba(90, 57, 238, 0.12);
+  }
+
+  .blob-shape {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+
+  .blob-shape-2 {
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 270 100% 98%; /* #fcf8ff */
+    --foreground: 255 16% 12%; /* #1c1a24 */
+    --card: 0 0% 100%;
+    --card-foreground: 255 16% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 255 16% 12%;
+    --primary: 252 80% 54%; /* #522de6 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 27 100% 29%; /* #964900 */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 260 20% 90%;
+    --muted-foreground: 255 10% 40%;
+    --accent: 31 99% 58%; /* #fe8a29 */
+    --accent-foreground: 26 100% 20%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 260 20% 85%;
+    --input: 260 20% 85%;
+    --ring: 252 80% 54%;
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
