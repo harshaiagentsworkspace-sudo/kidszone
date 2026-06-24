@@ -25,9 +25,7 @@ export function Hero() {
             animate="visible"
             className="flex flex-col items-start gap-6 z-20 relative"
           >
-            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 bg-pastel-pink px-4 py-2 rounded-full mb-2">
-              <span className="text-secondary font-bold text-sm">🌟 Best Kindergarten in City</span>
-            </motion.div>
+
             
             <motion.h1 variants={fadeUp} className="display-lg text-foreground">
               A Bright Start for Your Child&apos;s <span className="text-primary relative inline-block">
