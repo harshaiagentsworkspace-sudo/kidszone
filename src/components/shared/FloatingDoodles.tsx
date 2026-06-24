@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { floatAnimation } from "@/lib/animations";
 
 export function StarDoodle({ className }: { className?: string }) {
   return (
@@ -38,9 +37,6 @@ export function FloatingDoodle({ type, className, delay = 0 }: FloatingDoodlePro
   return (
     <motion.div
       className={cn("absolute opacity-70 pointer-events-none z-10", className)}
-      variants={floatAnimation}
-      animate="visible"
-      initial="hidden"
       style={{
         animationDelay: `${delay}s`,
         animationDuration: '4s',
