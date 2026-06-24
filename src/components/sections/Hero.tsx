@@ -10,10 +10,10 @@ import Image from "next/image";
 export function Hero() {
   return (
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden bg-background">
-      <FloatingDoodle type="star" className="top-32 left-[10%]" delay={0} />
-      <FloatingDoodle type="crown" className="top-40 right-[15%]" delay={1} />
-      <FloatingDoodle type="swirl" className="bottom-20 left-[15%]" delay={2} />
-      <FloatingDoodle type="star" className="bottom-40 right-[10%]" delay={0.5} />
+      <FloatingDoodle type="star" className="top-32 left-[10%] hidden md:block" delay={0} />
+      <FloatingDoodle type="crown" className="top-40 right-[15%] hidden md:block" delay={1} />
+      <FloatingDoodle type="swirl" className="bottom-20 left-[15%] hidden md:block" delay={2} />
+      <FloatingDoodle type="star" className="bottom-40 right-[10%] hidden md:block" delay={0.5} />
 
       <div className="container mx-auto max-w-[1280px] px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

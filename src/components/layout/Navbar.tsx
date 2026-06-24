@@ -89,7 +89,7 @@ export function Navbar() {
             <SheetTrigger className="p-2 border-none shadow-none text-foreground hover:bg-surface-dim/50 rounded-full focus-visible:outline-none">
               <Menu className="w-6 h-6" />
             </SheetTrigger>
-            <SheetContent side="right" className="bg-background w-[300px] sm:w-[400px]">
+            <SheetContent side="right" className="bg-background w-[300px] sm:w-[400px] p-8">
               <SheetTitle className="font-quicksand font-bold text-2xl mb-8 flex items-center gap-2">
                  <Image
                     src="/logo.png"
@@ -121,12 +121,12 @@ export function Navbar() {
                   
                   <div className="space-y-4 mt-6 text-sm text-foreground/70">
                     <div className="flex items-center gap-3">
-                      <Phone className="w-4 h-4 text-primary" />
-                      <span>+1 (555) 123-4567</span>
+                      <Phone className="w-4 h-4 text-primary shrink-0" />
+                      <span>8223951666, 8223951667</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <Mail className="w-4 h-4 text-primary" />
-                      <span>hello@kidszone.edu</span>
+                      <Mail className="w-4 h-4 text-primary shrink-0" />
+                      <span>kidszonejbp@gmail.com</span>
                     </div>
                   </div>
                 </div>

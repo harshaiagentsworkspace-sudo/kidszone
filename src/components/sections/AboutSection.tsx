@@ -13,40 +13,59 @@ export function AboutSection() {
       <div className="container mx-auto max-w-[1280px] px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
-          {/* Images */}
+          {/* Images (Desktop) */}
           <motion.div 
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "0px" }}
             variants={fadeUp}
-            className="relative h-[500px] hidden md:flex items-center justify-center"
+            className="relative h-[500px] w-full hidden lg:flex items-center justify-center"
           >
-             <div className="relative w-4/5 h-4/5 flex items-center justify-center bg-white rounded-full p-8 shadow-ambient-hover">
+             <div className="relative w-[250px] h-[250px] md:w-[400px] md:h-[400px] flex items-center justify-center bg-white rounded-full p-8 shadow-ambient-hover">
                 <Image 
                   src="/logo.png" 
                   alt="Kids Zone Logo"
                   fill
-                  className="object-contain p-8"
+                  className="object-contain p-4 md:p-8"
                 />
              </div>
              
              {/* Decorative element */}
-             <div className="absolute top-10 right-10 w-20 h-20 bg-pastel-yellow rounded-full -z-10 animate-pulse"></div>
+             <div className="absolute top-0 right-4 md:top-10 md:right-10 w-16 h-16 md:w-20 md:h-20 bg-pastel-yellow rounded-full -z-10 animate-pulse"></div>
           </motion.div>
 
           {/* Text Content */}
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "0px" }}
             variants={fadeUp}
+            className="lg:pl-8"
           >
             <SectionHeading 
               title="About Kids Zone" 
-              subtitle="Where little minds blossom through play, curiosity, and joyful discovery."
               centered={false}
+              className="mb-4 lg:mb-6"
             />
             
+            {/* Image (Mobile Only) */}
+            <div className="relative h-[250px] w-full flex lg:hidden items-center justify-center mb-6 mt-4">
+               <div className="relative w-[220px] h-[220px] flex items-center justify-center bg-white rounded-full p-4 shadow-ambient-hover">
+                  <Image 
+                    src="/logo.png" 
+                    alt="Kids Zone Logo"
+                    fill
+                    className="object-contain p-4"
+                  />
+               </div>
+               {/* Decorative element */}
+               <div className="absolute top-2 right-12 w-14 h-14 bg-pastel-yellow rounded-full -z-10 animate-pulse"></div>
+            </div>
+
+            <p className="body-lg text-foreground/70 max-w-2xl text-balance mb-8">
+              Where little minds blossom through play, curiosity, and joyful discovery.
+            </p>
+
             <div className="space-y-6 text-foreground/80 mb-8 body-md">
               <p>
                 Since our founding in 2018, Kids Zone has steadily grown through every challenge, standing resilient in our commitment to excellence. Our singular mission is to provide every individual with a proper, foundational education that paves the way for a better, brighter life.
