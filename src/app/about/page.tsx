@@ -21,10 +21,13 @@ export default function AboutPage() {
             <div className="space-y-6">
               <h2 className="headline-md text-foreground">A Legacy of Joyful Learning</h2>
               <p className="body-md text-foreground/80 leading-relaxed">
-                Founded in 2010, Kids Zone started with a simple belief: early education shouldn&apos;t just be about preparing for school; it should be about preparing for life. We set out to create an environment where children feel completely safe to express themselves, make mistakes, and discover their unique talents.
+                Since its establishment in 2018, our school has been committed to providing quality education and nurturing young minds. Over the years, we have faced various challenges and celebrated many achievements, yet our dedication to learning and growth has remained unwavering.
               </p>
               <p className="body-md text-foreground/80 leading-relaxed">
-                Over the past decade, we&apos;ve grown from a small playgroup to a comprehensive kindergarten, but our core philosophy remains unchanged. We still believe in the magic of muddy hands, the power of a good story, and the infinite potential within every child.
+                Our mission is simple: to ensure that every student receives a strong educational foundation that empowers them to build a brighter future. We believe that education is the key to personal development and lifelong success, and we strive to create an environment where every learner can thrive, grow, and reach their full potential.
+              </p>
+              <p className="body-md text-foreground/80 leading-relaxed">
+                At our school, we are not just shaping academic excellence—we are helping individuals develop the knowledge, skills, and values needed for a better life.
               </p>
               
               <ul className="space-y-4 mt-8">
