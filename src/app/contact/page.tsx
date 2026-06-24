@@ -37,7 +37,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h4 className="font-bold text-lg font-quicksand mb-1">Our Campus</h4>
-                      <p className="text-foreground/70 text-sm">123 Education Lane, Learning District, Dreamville, NY 10001</p>
+                      <p className="text-foreground/70 text-sm">Ward no.15 Civil Court Square Katangi road Patan, Jabalpur</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -49,8 +49,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h4 className="font-bold text-lg font-quicksand mb-1">Phone</h4>
-                      <p className="text-foreground/70 text-sm mb-1">+1 (555) 123-4567</p>
-                      <p className="text-foreground/70 text-sm">+1 (555) 987-6543</p>
+                      <p className="text-foreground/70 text-sm mb-1">8223951666</p>
+                      <p className="text-foreground/70 text-sm">8223951667</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -62,8 +62,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h4 className="font-bold text-lg font-quicksand mb-1">Email</h4>
-                      <p className="text-foreground/70 text-sm mb-1">admissions@kidszone.edu</p>
-                      <p className="text-foreground/70 text-sm">hello@kidszone.edu</p>
+                      <p className="text-foreground/70 text-sm">kidszonejbp@gmail.com</p>
                     </div>
                   </CardContent>
                 </Card>
