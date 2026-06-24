@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Mail, MapPin, Globe, Heart } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
 import { WaveDivider } from "@/components/shared/WaveDivider";
 
 export function Footer() {
@@ -30,11 +30,11 @@ export function Footer() {
               Providing a safe, stimulating, and premium environment for your child&apos;s early education. Building foundations with trustworthy joy.
             </p>
             <div className="flex items-center gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
-                <Globe className="w-5 h-5" />
+              <a href="https://www.facebook.com/share/18uAat4xG8/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+                <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
-                <Heart className="w-5 h-5" />
+              <a href="https://www.instagram.com/kidszonepatan?igsh=NzdnOW5pbnFuODZ1" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+                <Instagram className="w-5 h-5" />
               </a>
             </div>
           </div>
