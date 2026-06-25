@@ -71,8 +71,7 @@ export default function AboutPage() {
                 />
               </div>
             </div>
-            <h3 className="font-quicksand font-bold text-2xl">Dr. Eleanor Sterling</h3>
-            <p className="text-secondary font-medium mb-6">M.Ed. Early Childhood Development</p>
+            <h3 className="font-quicksand font-bold text-2xl mb-6">Mrs. Maya Vyas</h3>
             <p className="italic text-foreground/70 leading-relaxed">
               &quot;At Kids Zone, we don&apos;t just teach; we ignite the spark of curiosity. My team and I are dedicated to ensuring that when your child walks through our doors, they are stepping into a world where their ideas are valued, their feelings are respected, and their potential is limitless.&quot;
             </p>
