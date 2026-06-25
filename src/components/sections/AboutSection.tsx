@@ -6,8 +6,29 @@ import { SectionHeading } from "@/components/shared/SectionHeading";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
+import { useState, useEffect } from "react";
+import { createClient } from "@/utils/supabase/client";
 
 export function AboutSection() {
+  const [aboutImage, setAboutImage] = useState<string>("/logo.png");
+  const supabase = createClient();
+
+  useEffect(() => {
+    const fetchSettings = async () => {
+      const { data } = await supabase
+        .from('site_settings')
+        .select('value')
+        .eq('key', 'about_image')
+        .single();
+        
+      if (data?.value) {
+        setAboutImage(data.value);
+      }
+    };
+    
+    fetchSettings();
+  }, [supabase]);
+
   return (
     <section className="py-24 bg-white relative">
       <div className="container mx-auto max-w-[1280px] px-6">
@@ -23,10 +44,10 @@ export function AboutSection() {
           >
              <div className="relative w-[250px] h-[250px] md:w-[400px] md:h-[400px] flex items-center justify-center bg-white rounded-full p-8 shadow-ambient-hover">
                 <Image 
-                  src="/logo.png" 
-                  alt="Kids Zone Logo"
+                  src={aboutImage} 
+                  alt="About Kids Zone Image"
                   fill
-                  className="object-contain p-4 md:p-8"
+                  className="object-contain p-4 md:p-8 rounded-full"
                 />
              </div>
              
@@ -52,10 +73,10 @@ export function AboutSection() {
             <div className="relative h-[250px] w-full flex lg:hidden items-center justify-center mb-6 mt-4">
                <div className="relative w-[220px] h-[220px] flex items-center justify-center bg-white rounded-full p-4 shadow-ambient-hover">
                   <Image 
-                    src="/logo.png" 
-                    alt="Kids Zone Logo"
+                    src={aboutImage} 
+                    alt="About Kids Zone Image"
                     fill
-                    className="object-contain p-4"
+                    className="object-contain p-4 rounded-full"
                   />
                </div>
                {/* Decorative element */}

@@ -6,8 +6,29 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { FloatingDoodle } from "@/components/shared/FloatingDoodles";
 import Image from "next/image";
+import { useState, useEffect } from "react";
+import { createClient } from "@/utils/supabase/client";
 
 export function Hero() {
+  const [heroImage, setHeroImage] = useState<string>("/Hero Section VIdeo.png");
+  const supabase = createClient();
+
+  useEffect(() => {
+    const fetchSettings = async () => {
+      const { data } = await supabase
+        .from('site_settings')
+        .select('value')
+        .eq('key', 'hero_image')
+        .single();
+        
+      if (data?.value) {
+        setHeroImage(data.value);
+      }
+    };
+    
+    fetchSettings();
+  }, [supabase]);
+
   return (
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden bg-background">
       <FloatingDoodle type="star" className="top-32 left-[10%] hidden md:block" delay={0} />
@@ -75,8 +96,8 @@ export function Hero() {
           >
              <div className="relative w-full max-w-[1200px] aspect-[16/10] z-10 transform transition-transform hover:-translate-y-2 duration-500 xl:scale-125 lg:scale-110 lg:ml-10">
                 <Image 
-                  src="/Hero Section VIdeo.png" 
-                  alt="Hero Section Video Thumbnail"
+                  src={heroImage} 
+                  alt="Hero Section Image"
                   fill
                   className="object-contain"
                   priority
